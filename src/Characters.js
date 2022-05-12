@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'; 
 
-function CharacterData() {
+function Characters() {
     const [characters, setCharacters] = useState([])
     const fetchCharacters = async function () {
         try {
@@ -22,9 +22,9 @@ function CharacterData() {
     
     return (
         <div>
-            <p>This is the CharacterData component that is fetching the character data.</p>
+            <p>This is the Characters component that is fetching the character data.</p>
         </div>
   )
 }
 
-export default CharacterData
+export default Characters

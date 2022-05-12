@@ -1,12 +1,13 @@
 import './App.css';
-import CharacterData from "./CharacterData.js"
+import Characters from "./Characters.js"
 
 function App() {
   return (
     <div className="App">
-    <CharacterData/> 
     
-    <p>This is the main App component.</p>
+      <p>This is the main App component.</p>
+      <Characters/> 
+
     </div>
   );
 }
