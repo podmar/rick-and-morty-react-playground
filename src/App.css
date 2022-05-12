@@ -13,6 +13,11 @@
   margin: 1em;
 }
 
+.HighlightColours {
+  background-color: rgb(42, 156, 118);
+  color: white;
+}
+
 .FlipCard {
   width: 10rem;
   height: 10rem;
@@ -50,7 +55,3 @@
   transform: rotateY(180deg);
 }
 
-.HighlightColours {
-  background-color: rgb(42, 156, 118);
-  color: white;
-}
