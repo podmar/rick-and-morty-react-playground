@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'; 
+import CharacterCard from './CharacterCard';
 
 function Characters() {
     const [characters, setCharacters] = useState([])
@@ -23,6 +24,9 @@ function Characters() {
     return (
         <div>
             <p>This is the Characters component that is fetching the character data.</p>
+
+            {characters.map(character => CharacterCard(character))}
+
         </div>
   )
 }
