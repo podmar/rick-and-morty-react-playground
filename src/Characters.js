@@ -22,11 +22,8 @@ function Characters() {
     }, [])
     
     return (
-        <div>
-            <p>This is the Characters component that is fetching the character data.</p>
-
+        <div className='FlexRow WrapMargin'>
             {characters.map(character => CharacterCard(character))}
-
         </div>
   )
 }

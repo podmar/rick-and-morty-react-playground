@@ -4,8 +4,8 @@ import { Button, Card } from 'react-bootstrap'
 function CharacterCard(data) {
 
   return (
-    <div>
-      <Card style={{ width: '18rem' }}>
+    <div className='CardClass'>
+      <Card style={{ width: '10rem' }}>
         <Card.Img variant="top" src={data.image} />
         <Card.Body>
           <Card.Title>{data.name}</Card.Title>
