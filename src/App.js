@@ -5,8 +5,8 @@ import Characters from "./Characters.js"
 function App() {
   return (
     <div className="App">
-        <Navbar bg="light" variant="light" className='FlexRow'>
-          <Navbar.Brand href="#home">Rick and Morty Character List</Navbar.Brand>
+        <Navbar className='FlexRow HighlightColours' variant="dark">
+          <Navbar.Brand className='HighlightColours' href="#home">Rick and Morty Character List</Navbar.Brand>
         </Navbar>
 
       <Container>
