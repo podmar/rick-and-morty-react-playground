@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
+import ShowMoreButton from './ShowMoreButton';
 
 function CharacterCard({props}) {
   const image = props.image;
@@ -20,7 +21,7 @@ function CharacterCard({props}) {
             <Card.Text>
               {`${species} ${gender}`}
             </Card.Text> 
-            <Button variant="primary">More info</Button>
+            <ShowMoreButton />
           </Card.Body>
         </Card>
     </div>

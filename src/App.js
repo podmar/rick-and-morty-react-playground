@@ -1,6 +1,7 @@
 import { Col, Container, Form, Navbar, Row } from 'react-bootstrap';
 import './App.css';
 import Characters from "./Characters.js"
+import CharacterModal from './CharacterModal';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 
 
       </Container>
+      {/* <CharacterModal /> */}
 
     </div>
   );
