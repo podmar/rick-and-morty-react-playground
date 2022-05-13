@@ -29,7 +29,7 @@ function Characters() {
                         className='FlipCard' 
                         key={character.id}
                         >
-                        <CharacterCard props={character}/>
+                        <CharacterCard char={character}/>
                     </div>)
             })};
         </div>

@@ -2,11 +2,12 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import ShowMoreButton from './ShowMoreButton';
 
-function CharacterCard({props}) {
-  const image = props.image;
-  const name = props.name;
-  const gender = props.gender;
-  const species = props.species;
+function CharacterCard(props) {
+  const image = props.char.image;
+  const name = props.char.name;
+  const gender = props.char.gender;
+  const species = props.char.species;
+  const character = props.char;
   
   return (
     <div className='FlipCardInner'>
@@ -21,7 +22,7 @@ function CharacterCard({props}) {
             <Card.Text>
               {`${species} ${gender}`}
             </Card.Text> 
-            <ShowMoreButton />
+            <ShowMoreButton char={character}/>
           </Card.Body>
         </Card>
     </div>

@@ -2,34 +2,26 @@ import React, { useState } from 'react'
 import { Modal, Button } from 'react-bootstrap'
 
 
-function CharacterModal( {props} ) {
-  const image = props.image;
-  const name = props.name;
-  const gender = props.gender;
-  const species = props.species;
+function CharacterModal(props) {
+  const image = props.char.image;
+  const name = props.char.name;
+  const gender = props.char.gender;
+  const species = props.char.species;
 
-  const [show, setShow] = useState(false);
-
+  const [show, setShow] = useState(props.show);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>{name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>{`${species}, ${gender}`}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
           </Button>
         </Modal.Footer>
       </Modal>
