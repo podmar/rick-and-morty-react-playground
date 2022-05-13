@@ -23,12 +23,13 @@ function Characters() {
     
     return (
         <div className='FlexRow WrapMargin'>
-            {characters.map((character) => {
+            {characters && characters.map((character) => {
                 return (
                     <div 
                         className='FlipCard' 
-                        key={character.id}>
-                        {CharacterCard(character)}
+                        key={character.id}
+                        >
+                        <CharacterCard props={character}/>
                     </div>)
             })};
         </div>
