@@ -23,7 +23,14 @@ function Characters() {
     
     return (
         <div className='FlexRow WrapMargin'>
-            {characters.map(character => CharacterCard(character))}
+            {characters.map((character) => {
+                return (
+                    <div 
+                        className='FlipCard' 
+                        key={character.id}>
+                        {CharacterCard(character)}
+                    </div>)
+            })};
         </div>
   )
 }
