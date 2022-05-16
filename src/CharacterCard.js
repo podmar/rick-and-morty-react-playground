@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import ShowMoreButton from './ShowMoreButton';
+import CharacterModal from './CharacterModal';
 
 function CharacterCard(props) {
   const image = props.char.image;
@@ -22,7 +22,7 @@ function CharacterCard(props) {
             <Card.Text>
               {`${species} ${gender}`}
             </Card.Text> 
-            <ShowMoreButton char={character}/>
+            <CharacterModal char={character}/>
           </Card.Body>
         </Card>
     </div>

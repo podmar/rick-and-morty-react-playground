@@ -1,10 +1,16 @@
-import { Col, Container, Navbar, Row } from 'react-bootstrap';
+import { Col, Container, Form, Navbar, Row } from 'react-bootstrap';
 import './App.css';
 import Characters from "./Characters.js"
-import CharacterModal from './CharacterModal';
-import Search from './Search';
+import { useState } from 'react';
 
 function App() {
+    const [url, changeUrl] = useState("https://rickandmortyapi.com/api/character")
+    const [searchValue, changeSearchValue] = useState("")
+
+    const handleChange = (e) => {
+        changeSearchValue(e.target.value.toLowerCase())
+    }
+
   return (
     <div className="App">
         <Navbar className='FlexRow HighlightColours' variant="dark">
@@ -14,7 +20,7 @@ function App() {
               <Navbar.Brand className='HighlightColours' href="#home">Rick and Morty Character List</Navbar.Brand>
             </Col>
             <Col>            
-              <Search />
+              <Form.Control type='input' placeholder='Search' onChange={ handleChange }/>
             </Col>
           </Container>
        
@@ -22,17 +28,15 @@ function App() {
 
       <Container>
         <Row>
-          <Characters /> 
+          <Characters url={url} searchValue={searchValue}/> 
         </Row>
 
         <Row></Row>
-        
-
 
       </Container>
 
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
