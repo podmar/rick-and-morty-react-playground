@@ -1,7 +1,8 @@
-import { Col, Container, Form, Navbar, Row } from 'react-bootstrap';
+import { Col, Container, Navbar, Row } from 'react-bootstrap';
 import './App.css';
 import Characters from "./Characters.js"
 import CharacterModal from './CharacterModal';
+import Search from './Search';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
               <Navbar.Brand className='HighlightColours' href="#home">Rick and Morty Character List</Navbar.Brand>
             </Col>
             <Col>            
-              <Form.Control type='input' placeholder="Search" />
+              <Search />
             </Col>
           </Container>
        
